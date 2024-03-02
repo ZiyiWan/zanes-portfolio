@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FiUser } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
 
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
@@ -60,22 +62,43 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-3/4 lg:h-3/4 lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-3/4 lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-14 justify-center p-12 lg:gap-10"
         >
-          <span>Hi Zane,</span>
+          <div className="flex items-center">
+            {/* Icon container */}
+            <div className="absolute pl-3 text-gray-500">
+              <FiUser />
+            </div>
+            {/* Input field with added padding to make space for the icon */}
+            <input
+              name="user_name"
+              type="text"
+              className="bg-transparent border rounded-full border-gray-300 outline-none pl-10 pr-3 py-2 w-full lg:w-auto lg:min-w-[400px]"
+              placeholder="Name"
+            />
+          </div>
+          <div className="flex items-center">
+            {/* Icon container */}
+            <div className="absolute pl-3 text-gray-500">
+              <AiOutlineMail />
+            </div>
+            {/* Input field with added padding to make space for the icon */}
+            <input
+              name="user_email"
+              type="text"
+              className="bg-transparent border rounded-full border-gray-300 outline-none pl-10 pr-3 py-2 w-full lg:w-auto lg:min-w-[400px]"
+              placeholder="Email"
+            />
+          </div>
+
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none lg:h-auto h-32"
+            className="bg-transparent border border-b-black outline-none resize-none lg:h-auto h-32 rounded-2xl pr-3 py-2 pl-4"
             name="user_message"
+            placeholder="Type your message here"
           />
-          <span>Email address to reply to</span>
-          <input
-            name="user_email"
-            type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none"
-          />
-          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
-            Send
+          <button className="bg-purple-200 rounded-2xl font-semibold text-gray-600 p-4 w-48">
+            Let's Talk →
           </button>
           {success && (
             <span className="text-green-600 font-semibold">

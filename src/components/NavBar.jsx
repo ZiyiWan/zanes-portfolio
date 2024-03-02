@@ -51,7 +51,7 @@ const NavBar = () => {
     opened: { x: 0, opacity: 1 },
   };
   return (
-    <div className="h-full items-center flex justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+    <div className="h-full items-center flex justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl shadow-xl">
       {/* Navbar Menu div */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
@@ -123,7 +123,7 @@ const NavBar = () => {
         >
           {links.map((link) => (
             <motion.div variants={linksVariants} key={link.url}>
-              <Link href={link.url}>{link.title}</Link>
+              <a href={link.url}>{link.title}</a>
             </motion.div>
           ))}
         </motion.div>
