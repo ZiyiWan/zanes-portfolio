@@ -54,16 +54,17 @@ const Homepage = () => {
             width={700}
             height={700}
             className="object-contain pr-15 pt-20"
+            priority
           />
         </div>
         {/* Text div */}
         <div className="h-1/2 relative flex flex-col gap-8 items-center justify-center lg:h-full lg:w-1/2">
           <h1 className="text-4xl font-bold md:text-5xl">
             <span style={{ color: "#ffadad" }}>A</span>
-            <span style={{ color: "#ffd6a5" }}>l</span>
-            <span style={{ color: "#fdffb6" }}>o</span>
-            <span style={{ color: "#caffbf" }}>h</span>
-            <span style={{ color: "#9bf6ff" }}>a</span>
+            <span style={{ color: "#ffd6a5" }}>L</span>
+            <span style={{ color: "#fdffb6" }}>O</span>
+            <span style={{ color: "#caffbf" }}>H</span>
+            <span style={{ color: "#9bf6ff" }}>A</span>
             <span style={{ color: "#a0c4ff" }}>!</span> Welcome to my zone
           </h1>
 
@@ -81,7 +82,7 @@ const Homepage = () => {
               <GrDownload size={18} className="relative -top-0.5" />
             </button>
             <button
-              className="p-4 rounded-lg ring-1 ring-gray-50 hover:bg-red-100 bg-red-50 shadow-lg flex items-center gap-2"
+              className="p-4 rounded-lg hover:bg-red-100 bg-red-50 shadow-lg flex items-center gap-2"
               onClick={() => {
                 router.push("/contact");
               }}
@@ -102,8 +103,8 @@ const Homepage = () => {
         </h1>
         {/* Service List */}
         <div className="flex flex-col lg:flex-row items-center gap-16 justify-between p-8">
-          {servicesList.map((service) => (
-            <ServiceCard service={service} key={service.icon} />
+          {servicesList.map((service, index) => (
+            <ServiceCard service={service} key={service.title || index} />
           ))}
         </div>
       </div>
@@ -111,18 +112,23 @@ const Homepage = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center p-8 relative lg:gap-72 gap-5">
         {/* Heading div */}
         <div className="flex flex-col justify-center items-start gap-4">
-          <h1 className="font-bold text-3xl flex flex-row gap-1 justify-center items-center">
+          <h1 className="font-bold text-2xl flex flex-row gap-1 justify-center items-center">
             <div className="relative w-3.5 h-3.5 rounded-full ring-2 ring-black bg-white-300 shadow-black shadow-xl z-40" />
             <div className="relative w-4 h-4 rounded-full bg-orange-400 -left-6 top-0.5" />
             Latest Projects
           </h1>
           {/* Des */}
-          <div className="text-lg text-gray-500 italic">
-            Here shows some screenshots and short description <br />
-            of my latest projects.
+          <div className="text-lg text-gray-500 italic w-96">
+            Here shows some screenshots and short description of my latest
+            projects.
           </div>
           {/* Button to projects */}
-          <button className="bg-orange-300 rounded-full font-semibold text-gray-600 p-4 w-48 shadow-xl hover:bg-orange-400">
+          <button
+            className="bg-orange-300 rounded-full font-semibold text-gray-600 p-4 w-48 shadow-xl hover:bg-orange-400"
+            onClick={() => {
+              router.push("/portfolio");
+            }}
+          >
             All projects →
           </button>
         </div>
@@ -137,7 +143,7 @@ const Homepage = () => {
             className="mySwiper"
           >
             {projectsList.map((project, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={project.title || index}>
                 <ProjectCard project={project} />
               </SwiperSlide>
             ))}
@@ -150,7 +156,7 @@ const Homepage = () => {
 
 const ServiceCard = ({ service }) => {
   return (
-    <div className="flex flex-row sm:flex-col items-center justify-center w-2/3 rounded-2xl shadow-xl bg-gradient-to-b from-blue-50 to-red-100 lg:w-[32rem] xl:w-[40rem] gap-3 lg:h-64 hover:shadow-2xl">
+    <div className="flex flex-row sm:flex-col items-center justify-center w-2/3 rounded-xl shadow-xl bg-gradient-to-b from-blue-50 to-red-100 lg:w-[32rem] xl:w-[40rem] gap-3 lg:h-64 hover:shadow-2xl shadow-red-200 hover:shadow-orange-300">
       {/* icon */}
       <div className="text-orange-400 relative pl-4 sm:p-0">{service.icon}</div>
       {/* Title */}

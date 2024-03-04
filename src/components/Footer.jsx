@@ -44,10 +44,6 @@ const Footer = () => {
             <div className="flex flex-col gap-4 px-4">
               Contact With Me
               <div className="flex items-center gap-2">
-                <Image src="/qq.png" alt="qq icon" width={24} height={24} />
-                <span>576384038</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <Image
                   src="/Email_icon.png"
                   alt="email icon"
@@ -55,6 +51,10 @@ const Footer = () => {
                   height={24}
                 />
                 <span>zwan0238@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Image src="/qq.png" alt="qq icon" width={24} height={24} />
+                <span>576384038</span>
               </div>
               <div className="flex items-start gap-2">
                 <Image

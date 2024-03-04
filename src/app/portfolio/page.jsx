@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const PortfolioPage = () => {
-  return (
-    <div>
-      Portfolio 
-    </div>
-  )
-}
+const ProjectsPage = () => {
+  return <div>Project</div>;
+};
 
-export default PortfolioPage
+export default ProjectsPage;
