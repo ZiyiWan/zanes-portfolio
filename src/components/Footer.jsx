@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-500 text-white">
-      <div className="max-w-6xl mx-auto px-4 py-8 xl:max-w-[100rem]">
-        <div className="flex flex-col lg:flex-row gap-8 justify-between">
-          <div className="flex flex-col mb-4 lg:mb-0 gap-3">
+    <footer className="bg-gray-800 text-white">
+      <div className="max-w-6xl mx-auto px-4 xl:max-w-[100rem] py-4">
+        <div className="flex flex-col lg:flex-row gap-5 justify-center lg:gap-24 items-center">
+          <div className="flex flex-col mb-1 lg:mb-0 gap-3">
             <Link
               href="/"
               className="text-sm bg-black rounded-md p-2 font-semibold flex items-center justify-center lg:justify-start w-24"
@@ -21,7 +21,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="mt-2">Creating solutions for today's challenges.</p>
-            <div className="flex gap-5">
+            <div className="lg:flex gap-5 hidden">
               <Link href="https://github.com/ZiyiWan">
                 <Image
                   src="/github.png"
@@ -40,7 +40,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="lg:flex flex-col lg:flex-row gap-8 hidden">
             <div className="flex flex-col gap-4 px-4">
               Contact With Me
               <div className="flex items-center gap-2">
@@ -56,24 +56,24 @@ const Footer = () => {
                 <Image src="/qq.png" alt="qq icon" width={24} height={24} />
                 <span>576384038</span>
               </div>
-              <div className="flex items-start gap-2">
-                <Image
-                  src="/wechat.png"
-                  alt="wechat icon"
-                  width={26}
-                  height={26}
-                />
-                <Image
-                  src="/QR.png"
-                  alt="qr icon"
-                  width={100}
-                  height={100}
-                  className="mt-2"
-                />
-              </div>
+            </div>
+            <div className="flex items-start gap-2">
+              <Image
+                src="/wechat.png"
+                alt="wechat icon"
+                width={26}
+                height={26}
+              />
+              <Image
+                src="/QR.png"
+                alt="qr icon"
+                width={100}
+                height={100}
+                className="mt-2"
+              />
             </div>
           </div>
-          <div className="border-l border-gray-700 pt-4 flex justify-center items-center">
+          <div className="border-t border-gray-700 pt-4 flex justify-center items-center lg:border-l lg:border-t-0">
             <p className="px-5">© 2024 Zane's Dev. All rights reserved.</p>
           </div>
         </div>

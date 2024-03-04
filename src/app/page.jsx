@@ -77,12 +77,12 @@ const Homepage = () => {
           </p>
 
           <div className="flex gap-4 w-full">
-            <button className="bg-orange-300 rounded-xl font-semibold text-gray-600 p-4 w-42 shadow-lg hover:bg-orange-400 flex items-center gap-2">
+            <button className="bg-orange-400 rounded-full font-semibold text-white p-4 w-42 shadow-lg hover:bg-orange-500 flex items-center gap-2 px-6">
               Download CV
               <GrDownload size={18} className="relative -top-0.5" />
             </button>
             <button
-              className="p-4 rounded-lg hover:bg-red-100 bg-red-50 shadow-lg flex items-center gap-2"
+              className="p-4 px-6 rounded-full hover:bg-red-100 bg-red-50 shadow-lg flex items-center gap-2"
               onClick={() => {
                 router.push("/contact");
               }}
@@ -109,7 +109,7 @@ const Homepage = () => {
         </div>
       </div>
       {/* Latest Project div */}
-      <div className="flex flex-col lg:flex-row items-center justify-center p-8 relative lg:gap-72 gap-5">
+      <div className="flex flex-col lg:flex-row items-center justify-center p-8 relative lg:gap-72 gap-5 pb-36">
         {/* Heading div */}
         <div className="flex flex-col justify-center items-start gap-4">
           <h1 className="font-bold text-2xl flex flex-row gap-1 justify-center items-center">
@@ -124,20 +124,21 @@ const Homepage = () => {
           </div>
           {/* Button to projects */}
           <button
-            className="bg-orange-300 rounded-full font-semibold text-gray-600 p-4 w-48 shadow-xl hover:bg-orange-400"
+            className="bg-orange-400 rounded-full font-semibold text-white p-4 w-48 shadow-xl hover:bg-orange-500 px-6"
             onClick={() => {
               router.push("/portfolio");
             }}
           >
-            All projects →
+            All Projects →
           </button>
         </div>
         {/* Projects div */}
-        <div className="w-[420px] flex justify-center items-center">
+        <div className="w-[520px] flex justify-center items-center">
           <Swiper
             pagination={{
               type: "fraction",
             }}
+            loop={true}
             navigation={true}
             modules={[Pagination, Navigation]}
             className="mySwiper"
@@ -156,7 +157,7 @@ const Homepage = () => {
 
 const ServiceCard = ({ service }) => {
   return (
-    <div className="flex flex-row sm:flex-col items-center justify-center w-2/3 rounded-xl shadow-xl bg-gradient-to-b from-blue-50 to-red-100 lg:w-[32rem] xl:w-[40rem] gap-3 lg:h-64 hover:shadow-2xl shadow-red-200 hover:shadow-orange-300">
+    <div className="flex flex-row sm:flex-col items-center justify-center w-2/3 rounded-xl bg-orange-100 lg:w-[32rem] xl:w-[40rem] gap-3 lg:h-[300px] shadow-2xl shadow-orange-100 hover:shadow-orange-200">
       {/* icon */}
       <div className="text-orange-400 relative pl-4 sm:p-0">{service.icon}</div>
       {/* Title */}
@@ -164,7 +165,7 @@ const ServiceCard = ({ service }) => {
         {service.title}
       </h1>
       {/* Des */}
-      <div className="px-12 text-xl font-thin text-start pb-2 hidden sm:block">
+      <div className="w-4/5 text-xl font-thin text-start pb-5 hidden sm:block">
         {service.des}
       </div>
     </div>
@@ -176,7 +177,7 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="flex flex-col gap-1 justify-center items-center pb-10 p-5">
       {/* img div */}
-      <div className="items-center shadow-md border-2 border-gray-200 px-10 pt-5 rounded-xl bg-red-50">
+      <div className="items-center px-16 py-8 rounded-xl bg-orange-300 shadow-xl shadow-orange-200">
         <Image
           src={project?.src} // Use optional chaining here
           alt={project?.title || "default title"} // Default title if project.title is undefined
@@ -186,13 +187,11 @@ const ProjectCard = ({ project }) => {
         />
         <div className="w-[250px] rounded-md py-2">
           {/* title div */}
-          <div className="sm:font-semibold text-xl font-normal sm:w-fit w-96">
+          <div className="sm:font-semibold text-xl font-normal sm:w-fit w-96 text-white">
             {project?.title}
           </div>
           {/* des div */}
-          <div className="text-base text-gray-500 italic pt-1">
-            {project?.des}
-          </div>
+          <div className="text-base text-white italic pt-1">{project?.des}</div>
         </div>
       </div>
     </div>

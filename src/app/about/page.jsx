@@ -43,7 +43,7 @@ const AboutPage = () => {
       title: "Web Developer",
       des: " Built a health-focused web applications using Next.js, FHIR and TypeScript, emphasizing user experience and data integration.",
       date: "Jun 2022 - Dec 2023",
-      company: "Digital Health, Monash Uni",
+      company: "Digital Health, Monash University",
     },
     {
       title: "Independent Web Developer",
@@ -61,7 +61,7 @@ const AboutPage = () => {
   return (
     <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
       {/* Text div */}
-      <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 xl:w-1/2 lg:pr-0">
+      <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-60 lg:w-2/3 xl:w-1/2 lg:pr-0">
         {/* About me div */}
         <div className="flex flex-col gap-12 justify-center">
           {/* About me Title */}
@@ -115,6 +115,7 @@ const AboutPage = () => {
             />
           ))}
         </div>
+        <div className="py-1" />
       </div>
       {/* SVG idv */}
       <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
@@ -130,7 +131,7 @@ const PositionDetail = ({ position, align }) => {
       {/* Experience Item */}
       <div className="flex justify-between">
         {/* Left */}
-        <div className="w-1/3 pb-10">
+        <div className="w-1/3">
           {isLeftAligned && <PositionComponent position={position} />}
         </div>
         {/* Center */}
@@ -161,7 +162,7 @@ const PositionComponent = ({ position }) => {
         {position.date}
       </div>
       {/* Company */}
-      <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+      <div className="p-1 rounded bg-white text-sm font-semibold w-auto">
         {position.company}
       </div>
     </div>

@@ -54,7 +54,7 @@ const ContactPage = () => {
               >
                 {letter}
               </motion.span>
-            ))}
+            ))}{" "}
             📩
           </div>
         </div>
@@ -62,8 +62,9 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-3/4 lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-14 justify-center p-12 lg:gap-10"
+          className="h-3/4 lg:w-1/2 bg-orange-100 rounded-xl text-xl flex flex-col gap-14 justify-center p-12 lg:gap-10 border-4 border-orange-200"
         >
+          <div className="pl-2">Hi there,</div>
           <div className="flex items-center">
             {/* Icon container */}
             <div className="absolute pl-3 text-gray-500">
@@ -73,7 +74,7 @@ const ContactPage = () => {
             <input
               name="user_name"
               type="text"
-              className="bg-transparent border rounded-full border-gray-300 outline-none pl-10 pr-3 py-2 w-full lg:w-auto lg:min-w-[400px]"
+              className="border rounded-full border-white outline-none pl-10 pr-3 py-2 w-full lg:w-auto lg:min-w-[400px]"
               placeholder="Name"
             />
           </div>
@@ -86,18 +87,17 @@ const ContactPage = () => {
             <input
               name="user_email"
               type="text"
-              className="bg-transparent border rounded-full border-gray-300 outline-none pl-10 pr-3 py-2 w-full lg:w-auto lg:min-w-[400px]"
+              className="border rounded-full border-white outline-none pl-10 pr-3 py-2 w-full lg:w-auto lg:min-w-[400px]"
               placeholder="Email"
             />
           </div>
-
           <textarea
             rows={6}
-            className="bg-transparent border border-b-black outline-none resize-none lg:h-auto h-32 rounded-2xl pr-3 py-2 pl-4"
+            className="border outline-none resize-none lg:h-auto h-32 rounded-2xl pr-3 py-2 pl-4 border-white"
             name="user_message"
             placeholder="Type your message here"
           />
-          <button className="bg-purple-200 rounded-2xl font-semibold text-gray-600 p-4 w-48">
+          <button className="bg-orange-300 rounded-2xl font-semibold text-white p-4 w-48 shadow-orange-200 shadow-xl hover:bg-orange-400">
             Let's Talk →
           </button>
           {success && (
