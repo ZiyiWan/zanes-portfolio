@@ -98,7 +98,7 @@ const ContactPage = () => {
             placeholder="Type your message here"
           />
           <button className="bg-orange-300 rounded-2xl font-semibold text-white p-4 w-48 shadow-orange-200 shadow-xl hover:bg-orange-400">
-            Let's Talk →
+            Let&apos;s Talk →
           </button>
           {success && (
             <span className="text-green-600 font-semibold">

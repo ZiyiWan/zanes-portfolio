@@ -68,17 +68,18 @@ const AboutPage = () => {
           <h1 className="font-bold text-3xl">About Me</h1>
           {/* About me Description */}
           <p className="text-lg">
-            " Hi there! This is Zane, a web developer with a knack for creating
-            engaging web experiences. My journey in web development has allowed
-            me to dive deep into technologies like React, TypeScript, and
-            Next.js, bringing ideas to life across a variety of projects. I'm
-            passionate about designing user-centric platforms that are both
-            impactful and visually appealing. Collaborating in dynamic teams
-            where innovation and creativity flourish is where I shine. Always on
-            the lookout for new learning opportunities, I'm excited to connect
-            and explore how we can collaborate to craft something truly special!
-            "
+            &ldquo;Hi there! This is Zane, a web developer with a knack for
+            creating engaging web experiences. My journey in web development has
+            allowed me to dive deep into technologies like React, TypeScript,
+            and Next.js, bringing ideas to life across a variety of projects.
+            I&apos;m passionate about designing user-centric platforms that are
+            both impactful and visually appealing. Collaborating in dynamic
+            teams where innovation and creativity flourish is where I shine.
+            Always on the lookout for new learning opportunities, I&apos;m
+            excited to connect and explore how we can collaborate to craft
+            something truly special!&rdquo;
           </p>
+
           {/* Motto div */}
           <div className="italic text-gray-400 text-base">
             Quality is never an accident , it is always the result of

@@ -20,7 +20,9 @@ const Footer = () => {
                 .dev
               </span>
             </Link>
-            <p className="mt-2">Creating solutions for today's challenges.</p>
+            <p className="mt-2">
+              Creating solutions for today&apos;s challenges.
+            </p>
             <div className="lg:flex gap-5 hidden">
               <Link href="https://github.com/ZiyiWan">
                 <Image
@@ -74,7 +76,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 pt-4 flex justify-center items-center lg:border-l lg:border-t-0">
-            <p className="px-5">© 2024 Zane's Dev. All rights reserved.</p>
+            <p className="px-5">© 2024 Zane&apos;s Dev. All rights reserved.</p>
           </div>
         </div>
       </div>
