@@ -77,10 +77,13 @@ const Homepage = () => {
           </p>
 
           <div className="flex gap-4 w-full">
-            <button className="bg-orange-400 rounded-full font-semibold text-white p-4 w-42 shadow-lg hover:bg-orange-500 flex items-center gap-2 px-6">
+            <a
+              href="/ZiyiWan_position_0422900812.pdf"
+              className="bg-orange-400 rounded-full font-semibold text-white p-4 w-42 shadow-lg hover:bg-orange-500 flex items-center gap-2 px-6"
+            >
               Download CV
               <GrDownload size={18} className="relative -top-0.5" />
-            </button>
+            </a>
             <button
               className="p-4 px-6 rounded-full hover:bg-red-100 bg-red-50 shadow-lg flex items-center gap-2"
               onClick={() => {

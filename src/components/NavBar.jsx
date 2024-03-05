@@ -51,7 +51,7 @@ const NavBar = () => {
     opened: { x: 0, opacity: 1 },
   };
   return (
-    <div className="h-full items-center flex justify-between px-4 sm:px-8 md:px-8 lg:px-16 xl:px-40 text-xl shadow-xl">
+    <div className="h-full items-center flex justify-between px-4 sm:px-8 md:px-8 lg:px-16 xl:px-40 text-xl shadow-xl shadow-orange-50">
       {/* Navbar Menu div */}
       <div className="hidden md:flex gap-4 w-1/2 md:w-5/6">
         {links.map((link) => (

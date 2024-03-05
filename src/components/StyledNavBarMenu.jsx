@@ -7,8 +7,8 @@ const StyledNavBarMenu = ({ link }) => {
   return (
     <Link
       href={link.url}
-      className={`rounded p-1 ${
-        pathName === link.url && "bg-black text-white"
+      className={`rounded p-2 ${
+        pathName === link.url && "bg-orange-400 text-white"
       }`}
     >
       {link.title}
