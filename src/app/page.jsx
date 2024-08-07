@@ -78,7 +78,7 @@ const Homepage = () => {
 
           <div className="flex gap-4 w-full">
             <a
-              href="/ZaneWan_frontend developer_0422900812.pdf"
+              href="/ZaneWan_web developer_0422900812.pdf"
               className="bg-orange-400 rounded-full font-semibold text-white p-4 w-42 shadow-lg hover:bg-orange-500 flex items-center gap-2 px-6"
             >
               Download CV
